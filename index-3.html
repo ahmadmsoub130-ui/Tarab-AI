@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b18">
+<meta name="description" content="طَرَب AI - استوديو عربي لتجهيز أفكار الأغاني والأوصاف الموسيقية.">
+<title>طَرَب AI | استوديو الأغاني العربية</title>
+<style>
+:root{--bg:#080b18;--panel:#121a30;--panel2:#0b1122;--text:#f4f5ff;--muted:#9ba7c5;--purple:#8c5cff;--cyan:#50d9e8;--border:rgba(255,255,255,.1)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#39216a55,transparent 38%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+.container{width:min(1100px,92%);margin:auto}header{border-bottom:1px solid var(--border);padding:16px 0;background:#080b18dd}.nav{display:flex;justify-content:space-between;align-items:center}.brand{font-size:23px;font-weight:900}.brand span{color:#b18cff}.tag{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:5px 12px;border-radius:30px}
+.hero{text-align:center;padding:54px 0 35px}.eyebrow{color:#b18cff;font-size:13px}.hero h1{font-size:clamp(34px,7vw,58px);line-height:1.3;margin:12px 0}.gradient{background:linear-gradient(90deg,#b18cff,#50d9e8);background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:650px;margin:auto}
+.layout{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start}.panel{background:linear-gradient(145deg,#17213c,#10172b);border:1px solid var(--border);border-radius:20px;padding:22px;box-shadow:0 14px 40px #0003}.heading{font-size:19px;margin:0 0 18px}.field{margin-bottom:17px}label{display:block;font-size:14px;font-weight:bold;margin-bottom:7px}.hint{font-size:11px;color:var(--muted);font-weight:normal}textarea,select,input[type=text]{width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:12px;outline:none;font:inherit}textarea{min-height:135px;resize:vertical}textarea:focus,select:focus,input:focus{border-color:var(--purple)}select option{background:#11172b}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:13px}.genres{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.genre,.btn{border:1px solid var(--border);border-radius:11px;padding:11px;color:var(--text);background:#0b1122;font:inherit;cursor:pointer}.genre.active{border-color:var(--purple);background:#8c5cff33}.genre:hover,.btn:hover{filter:brightness(1.2)}input[type=range]{width:100%;accent-color:var(--purple)}.range{display:flex;align-items:center;gap:12px}.range strong{color:var(--cyan);min-width:35px}.primary{width:100%;border:0;background:linear-gradient(100deg,#8053eb,#554bd0);color:white;padding:14px;border-radius:12px;font-weight:bold;font-size:15px;cursor:pointer}.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.secondary{background:#8c5cff20;border-color:#8c5cff66}.preview{white-space:pre-wrap;overflow-wrap:anywhere;min-height:310px;background:#090e1d;border:1px solid var(--border);border-radius:12px;padding:15px;font-size:13px;color:#dce2f7}.empty{display:grid;place-items:center;text-align:center;color:#8591b0}.notice{margin-top:14px;padding:12px;border:1px solid #d99c3c55;background:#d99c3c12;border-radius:11px;font-size:12px;color:#d8dbea}.notice b{color:#ffc66e}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0 45px}.feature{text-align:center;padding:17px;border:1px solid var(--border);border-radius:14px;background:#121a30}.feature p{font-size:12px;color:var(--muted);margin-bottom:0}footer{text-align:center;color:var(--muted);padding:22px;border-top:1px solid var(--border);font-size:12px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:#263454;padding:10px 17px;border-radius:10px;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:820px){.layout{grid-template-columns:1fr}}@media(max-width:520px){.panel{padding:16px}.grid2{grid-template-columns:1fr;gap:0}.genres{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.hero{padding-top:40px}.tag{font-size:10px}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><div class="brand">♫ طَرَب <span>AI</span></div><div class="tag">استوديو الموسيقى العربية</div></div></header>
+<main class="container">
+<section class="hero"><div class="eyebrow">✦ مساحة إبداعك الموسيقي</div><h1>خلّي فكرتك <span class="gradient">أغنية</span></h1><p>جهّز هوية أغنيتك: اللهجة، النوع الموسيقي، الصوت، الأداء والإيقاع، ثم صدّر وصف الإنتاج.</p></section>
+<div class="layout">
+<section class="panel">
+<h2 class="heading">01 — فكرة الأغنية والكلمات</h2>
+<div class="field"><label for="idea">اكتب فكرتك أو كلماتك</label><textarea id="idea" maxlength="5000" placeholder="مثلاً: راب أردني قوي عن الثقة بالنفس، بقوافي محكمة وأداء هجومي..."></textarea><div class="hint" id="count">0 / 5000 حرف</div></div>
+<div class="field"><label for="content">نوع المحتوى</label><select id="content"><option>كتابة كلمات أصلية انطلاقاً من الفكرة</option><option>استخدام الكلمات الجاهزة مع تحسين التوزيع الغنائي</option><option>كتابة مقطع ولازمة فقط</option><option>أغنية كاملة بمقدمة ومقاطع ولازمة وخاتمة</option><option>موسيقى فقط دون كلمات أو غناء</option></select></div>
+<h2 class="heading">02 — الهوية الموسيقية</h2>
+<div class="field"><label>اختر النوع الموسيقي</label><div class="genres" id="genres">
+<button class="genre active" data-value="راب عربي">راب 🎤</button><button class="genre" data-value="تراب عربي">تراب</button><button class="genre" data-value="دريل عربي">دريل</button><button class="genre" data-value="طرب عربي">طرب</button><button class="genre" data-value="شعبي عربي">شعبي</button><button class="genre" data-value="خليجي">خليجي</button><button class="genre" data-value="بوب عربي">بوب</button><button class="genre" data-value="مهرجانات">مهرجانات</button><button class="genre" data-value="إنشاد">إنشاد</button><button class="genre" data-value="R&B عربي">R&B</button><button class="genre" data-value="أفروبيت عربي">أفروبيت</button><button class="genre" data-value="موسيقى سينمائية">سينمائي</button>
+</div></div>
+<div class="grid2">
+<div class="field"><label for="dialect">اللهجة</label><select id="dialect"><option>الأردنية</option><option>الفلسطينية</option><option>السورية</option><option>اللبنانية</option><option>المصرية</option><option>السعودية النجدية</option><option>السعودية الحجازية</option><option>الخليجية</option><option>العراقية</option><option>اليمنية</option><option>المغربية</option><option>الجزائرية</option><option>التونسية</option><option>السودانية</option><option>العربية الفصحى</option></select></div>
+<div class="field"><label for="voice">الصوت</label><select id="voice"><option>صوت رجالي</option><option>صوت نسائي</option><option>دويتو رجالي ونسائي</option><option>كورال جماعي</option><option>موسيقى فقط دون غناء</option></select></div>
+<div class="field"><label for="performance">طبيعة الأداء</label><select id="performance"><option>هجومي قوي وواثق</option><option>ناعم وهادئ</option><option>حماسي وطاقة عالية</option><option>عاطفي ومؤثر</option><option>حزين وعميق</option><option>سريع وتقني</option><option>طربي مع إحساس</option><option>ساخر ومرح</option></select></div>
+<div class="field"><label for="mood">المزاج العام</label><select id="mood"><option>غامض ومظلم</option><option>قوي وواثق</option><option>رومانسي</option><option>حزين</option><option>احتفالي ومبهج</option><option>ملحمي وسينمائي</option><option>شعبي وراقص</option></select></div>
+<div class="field"><label for="duration">مدة الأغنية</label><select id="duration"><option>دقيقة واحدة</option><option>دقيقتان</option><option selected>ثلاث دقائق</option><option>أربع دقائق</option><option>خمس دقائق</option></select></div>
+<div class="field"><label for="structure">بنية الأغنية</label><select id="structure"><option>مقدمة، مقطع أول، لازمة، مقطع ثانٍ، لازمة، خاتمة</option><option>مقطع ولازمة</option><option>مقاطع راب متتابعة مع تصاعد</option><option>لازمة قوية ومتكررة ومقاطع قصيرة</option><option>موسيقى متواصلة دون غناء</option></select></div>
+</div>
+<div class="field"><label for="tempo">سرعة الإيقاع (BPM)</label><div class="range"><input id="tempo" type="range" min="60" max="180" value="95"><strong id="tempoVal">95</strong></div></div>
+<div class="field"><label for="instruments">الآلات والتوزيع الموسيقي <span class="hint">اختياري</span></label><input id="instruments" type="text" placeholder="808 Bass, Piano, Oud, Strings, Heavy Drums"></div>
+<div class="field"><label for="extra">تفاصيل إضافية <span class="hint">اختياري</span></label><textarea id="extra" style="min-height:85px" placeholder="قوافي محكمة، مخارج حروف واضحة، انتقالات قوية..."></textarea></div>
+<button class="primary" id="build">✦ جهّز وصف الأغنية</button>
+<div class="actions"><button class="btn secondary" id="copy">نسخ الوصف</button><button class="btn secondary" id="download">تنزيل الوصف</button></div>
+<div style="margin-top:9px"><button class="btn" id="reset" style="width:100%">مسح وإعادة ضبط</button></div>
+</section>
+<aside class="panel">
+<div style="display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px"><h2 class="heading" style="margin:0">وصف الإنتاج الموسيقي</h2><span class="hint">محرر محلي</span></div>
+<div class="preview empty" id="preview">♫<br>اكتب فكرتك واختر الإعدادات، ثم اضغط «جهّز وصف الأغنية».</div>
+<div class="notice"><b>تنبيه تقني:</b> هذه النسخة تجهّز وصفاً وإعدادات فقط. لم يتم ربط محرك توليد صوت؛ لذلك لا تنتج تسجيلاً صوتياً أو ملف MP3 حتى الآن.</div>
+</aside>
+</div>
+<section class="features"><div class="feature">🌍<b> لهجات عربية</b><p>إعدادات متعددة للهجات العربية.</p></div><div class="feature">🎧<b> هوية موسيقية</b><p>أنواع وإيقاعات وأداء متنوع.</p></div><div class="feature">✍️<b> تصدير الوصف</b><p>انسخ إعدادات مشروعك أو نزّلها.</p></div></section>
+</main>
+<footer>طَرَب AI © <span id="year"></span> — مشروع موسيقي عربي</footer>
+<div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);
+let genre='راب عربي',output='';
+$('year').textContent=new Date().getFullYear();
+document.querySelectorAll('.genre').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.genre').forEach(x=>x.classList.remove('active'));b.classList.add('active');genre=b.dataset.value;}));
+$('idea').addEventListener('input',()=>$('count').textContent=$('idea').value.length+' / 5000 حرف');
+$('tempo').addEventListener('input',()=>$('tempoVal').textContent=$('tempo').value);
+function toast(t){$('toast').textContent=t;$('toast').classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2400);}
+function build(){
+const idea=$('idea').value.trim();if(!idea){toast('اكتب فكرة الأغنية أولاً.');$('idea').focus();return;}
+const dialect=$('dialect').value;
+const dialectGuide={
+'الأردنية':'مفردات أردنية محكية طبيعية ونطق أردني متسق، دون خلط اللهجات.',
+'الفلسطينية':'مفردات وتعبيرات فلسطينية محكية ونطق طبيعي.',
+'السورية':'لهجة سورية محكية طبيعية وتراكيب سليمة.',
+'اللبنانية':'لهجة لبنانية محكية طبيعية وتعبيرات محلية.',
+'المصرية':'لهجة مصرية يومية طبيعية دون خلط بلهجات أخرى.',
+'السعودية النجدية':'مفردات ونطق نجدي سعودي طبيعي.',
+'السعودية الحجازية':'مفردات وتعبيرات حجازية سعودية طبيعية.',
+'الخليجية':'لهجة خليجية متجانسة مع تجنب خلط اللهجات.',
+'العراقية':'مفردات ونطق عراقي محكي طبيعي.',
+'اليمنية':'تعبيرات ومفردات يمنية محكية متسقة.',
+'المغربية':'دارجة مغربية طبيعية وتراكيب محلية.',
+'الجزائرية':'دارجة جزائرية ومفردات يومية طبيعية.',
+'التونسية':'لهجة تونسية محكية ومفردات محلية.',
+'السودانية':'لهجة سودانية يومية ونطق طبيعي.',
+'العربية الفصحى':'عربية فصحى سليمة وواضحة بلغة شعرية موسيقية.'
+};
+const parts=[
+'مشروع أغنية عربية جديدة',
+'الفكرة أو الكلمات: '+idea,
+'نوع المحتوى: '+$('content').value,
+'النوع الموسيقي: '+genre,
+'اللهجة: '+dialect,
+'تعليمات اللهجة: '+dialectGuide[dialect],
+'الصوت: '+$('voice').value,
+'طبيعة الأداء: '+$('performance').value,
+'المزاج: '+$('mood').value,
+'سرعة الإيقاع: '+$('tempo').value+' BPM',
+'المدة المستهدفة: '+$('duration').value,
+'بنية الأغنية: '+$('structure').value,
+'الآلات والتوزيع: '+($('instruments').value.trim()||'اختر توزيعاً مناسباً للنوع والمزاج'),
+'تفاصيل إضافية: '+($('extra').value.trim()||'لا توجد'),
+'متطلبات الجودة: نطق واضح، مخارج حروف سليمة، إيقاع متماسك، انتقالات موسيقية طبيعية، وتجنب التكرار غير المقصود.',
+'ملاحظة: هذه مواصفات إنتاج مقترحة وليست ملفاً صوتياً مولداً.'
+];
+output=parts.join('\n\n');
+$('preview').classList.remove('empty');$('preview').textContent=output;toast('تم تجهيز وصف الأغنية.');
+}
+$('build').addEventListener('click',build);
+$('copy').addEventListener('click',async()=>{if(!output){toast('جهّز الوصف أولاً.');return;}try{await navigator.clipboard.writeText(output);toast('تم نسخ الوصف.');}catch(e){const t=document.createElement('textarea');t.value=output;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();toast('تم النسخ.');}});
+$('download').addEventListener('click',()=>{if(!output){toast('جهّز الوصف أولاً.');return;}const blob=new Blob(['\ufeff'+output],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Tarab-AI-song-prompt.txt';a.click();URL.revokeObjectURL(url);toast('بدأ تنزيل الوصف.');});
+$('reset').addEventListener('click',()=>{if(!confirm('هل تريد مسح جميع الإعدادات؟'))return;document.querySelector('form')?.reset();$('idea').value='';$('extra').value='';$('instruments').value='';$('count').textContent='0 / 5000 حرف';$('tempo').value=95;$('tempoVal').textContent='95';$('preview').textContent='♫\nاكتب فكرتك واختر الإعدادات، ثم اضغط «جهّز وصف الأغنية». ';$('preview').classList.add('empty');output='';genre='راب عربي';document.querySelectorAll('.genre').forEach((b,i)=>b.classList.toggle('active',i===0));toast('تمت إعادة الضبط.');});
+</script>
+</body>
+</html>
